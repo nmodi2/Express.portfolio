@@ -1,0 +1,30 @@
+<% include partials/header.ejs %>
+
+
+
+
+<body class="d-flex flex-column h-1000 mb-5" style="background-color: rgba(17, 24, 39);" >
+  <header>      
+    <%- include partials/main_nav %>
+  </header>
+    <main class="flex-shrink-0">
+      <div class="container mt-4 mb-2" style="box-shadow: 1px 1px 5px 3px rgb(41 55 74); background-color: rgb(35 45 66);">
+        <div class="row" style="height: 100%;" >
+          <% if(title == "Home") { %> 
+            <%- include content/home %>
+          <%} else if(title == "About") { %> 
+            <%- include content/about %>
+          <%} else if(title == "Services") { %> 
+            <%- include content/service %>
+          <%} else if(title == "Projects") { %> 
+            <%- include content/project %>
+          <% } %>            
+        </div>
+    </main>   
+
+ 
+
+<%include partials/bottom_nav.ejs %>
+
+
+<% include partials/footer.ejs%> 
